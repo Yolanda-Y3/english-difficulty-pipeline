@@ -1,0 +1,71 @@
+{
+  "version": "2026-10-14.v1",
+  "routes": [
+    {
+      "id": "grammar_choice",
+      "grain": "small",
+      "rubric": "rubrics/grammar_choice.json",
+      "scope": "适用于单句/短语境四选一语法题。核心原则：同一语法点均有难易题，难度不设考点预设，只评呈现形式与综合度。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "grammar_fill_single",
+      "grain": "small",
+      "rubric": "rubrics/grammar_fill_single.json",
+      "scope": "适用于单句语境、1个空的语法填空小题（含有/无提示词两类）。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "grammar_fill_whole",
+      "grain": "whole",
+      "rubric": "rubrics/grammar_fill_whole.json",
+      "scope": "适用于语篇型语法填空（新课标10空，约200词）。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "cloze_single",
+      "grain": "small",
+      "rubric": "rubrics/cloze_single.json",
+      "scope": "适用于完形填空单个小题（四选一）。词汇分级术语见底部FAQ，AI可程序化判定。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "cloze_whole",
+      "grain": "whole",
+      "rubric": "rubrics/cloze_whole.json",
+      "scope": "适用于整篇完形填空（新课标15空）。词汇分级与强干扰项定义见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "reading_single",
+      "grain": "small",
+      "rubric": "rubrics/reading_single.json",
+      "scope": "适用于阅读理解单个小题。干扰项/强干扰项操作定义见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "reading_whole",
+      "grain": "whole",
+      "rubric": "rubrics/reading_whole.json",
+      "scope": "适用于整篇阅读理解。超纲词白名单与猜测负荷、认知负荷指数定义见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "seven_single",
+      "grain": "small",
+      "rubric": "rubrics/seven_single.json",
+      "scope": "适用于七选五单个空。'需理解全文结构'的具体情形见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "seven_whole",
+      "grain": "whole",
+      "rubric": "rubrics/seven_whole.json",
+      "scope": "适用于整篇七选五（5空7选）。干扰项的可填入性评估法见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "application_writing",
+      "grain": "writing",
+      "rubric": "rubrics/application_writing.json",
+      "scope": "适用于应用文写作题（80词左右）。本表评『任务要求难度』——只使用题目本身可观察的特征，学生作文质量不属于题目难度。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    },
+    {
+      "id": "continuation_writing",
+      "grain": "writing",
+      "rubric": "rubrics/continuation_writing.json",
+      "scope": "适用于读后续写（两段，给段首句）。无学生作文时，续写约束从题目本身可数，见底部FAQ。　维度分均为整数1–5，按锚定描述与AI判据取分。"
+    }
+  ]
+}

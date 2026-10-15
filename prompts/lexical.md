@@ -1,0 +1,5 @@
+识别本单元所有英语词汇出现，结合上下文还原lemma与pos，给出contextual_sense。
+tokens是程序按原文字面切出的出现清单，id已固定。每个token必须输出一个occurrence，id原样复制；不要自行编造id，不输出ref/字符下标。原文引用由程序根据id绑定。不可把多个token合并成一个，不可遗漏the/to等功能词、重复词和选项内容。非实义词或选项字母在pos及exemption中说明即可。exemption没有时使用JSON null，不要写字符串"null"。
+不要只挑看起来难的词。重复出现保留各自token id；短语语境可在contextual_sense说明，不新增token。常规派生、透明复合、专名、数词等例外由你结合语境判断，exemption说明依据或null。
+此节点不猜高低频、不猜词典排名、不直接宣称超纲或熟词僻义；后续会查询外部资源。
+coverage_note说明是否完成全部词汇出现的提取，complete=false时不能声称全为高频或没有僻义。

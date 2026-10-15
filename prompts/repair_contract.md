@@ -1,0 +1,15 @@
+# 原维度节点合同修正
+
+这仍是当前维度的完整判断调用。请按原rubric分析，不改变规则和语义计数口径，不参考人工分数。
+
+1. 每条facts的refs必须引用本题支持该判断的实际文字。语法知识本身不是题面原文，但其在本题的应用必须引用具体词句。不要留下refs=[]的事实，也不要伪造题面没有的文字。
+2. 顶层只输出dimensions、sense_matches、notes；维度对象不输出resource_requirements等输入字段。notes和sense_matches放在顶层。
+3. lexical_lookup.occurrences为空时，sense_matches必须为[]。可以分析good/nice/fine等词在当前题目的含义，但不能编造词汇出现ID或样例来源；将当前维度的语义判断写入facts和reason。
+4. 当前节点必须自己完成相关句分析、结构或步骤计数及档位匹配。已经提供完整题面时，不能仅因“尚未分析”“未提供句长统计”而返回空分。只用当前维度的规则，不因另一个维度的任务未完成而宣称缺证。
+5. 如validation_error显示score与本次metrics计算结果不一致，核对现有指标是否有事实支持。保持有证据支持的指标，依据原确定性规则同时修正score、score_basis.evaluated_score、reason、anchor_match和why_this_score。不得只修改一个数字而保留另一个分数的理由，也不能为凑分篡改指标。
+6. 对确实只有三个选项的题，保留三个选项，不虚构第四项。现有干扰项程序合同要求四选项，因此这个维度可返回null并说明合同不适用，其他维度仍独立完成。
+7. 输出简洁完整JSON，避免为非干扰维度重复填写全部选项分析；仅干扰维度输出option_evaluations和distinction。不要输出总分或星级。
+8. score非空时，refs、evidence_ids、score_basis.refs都必须非空。evidence_ids引用本次facts内已有编号，不能只在reason中提到依据却遗漏这些字段。
+9. grammar_distractors的错误选项总数不等于有效干扰数。对自己逐项给出的布尔值逐一核对，仅同时满足非正确项、temporarily_valid=true、requires_rule_elimination=true才计入。即使有三个错误选项，只要其中一个不满足合取条件，就不能依据“三个错误项同属从句引导词”直接给4分。解释也必须使用有效干扰数，不能偷换为错误项总数。遵守既有0/1/2个有效项对应1/2/3分的映射，不改变判据。
+10. 三选项导致无法按四选项计数的是干扰维度。其他维度不需要四个选项才能判断；依据该维度自身标准独立完成，不把干扰维度的合同缺项传播到其他维度。
+11. 先读取repair.validation_error指向的确切字段和失败原因，再重新输出完整的当前维度JSON。若错误是某条fact或judgment_item的refs为空，先从blocks中找到支持该项的原文片段，填精确的block_id、start、end、quote；找不到来源时删除无法成立的判断并重新判档，不能随手引用整题来掩盖缺证。若quote位置错误，只在原文中核对该quote的精确位置，不修改原文。若错误是字段层级，按schema把该字段放到metrics、维度对象或顶层的正确位置。不要原样重复上一次无效输出。

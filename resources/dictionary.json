@@ -1,0 +1,7 @@
+{
+  "version": "unconfigured",
+  "edition": null,
+  "rank_scope": null,
+  "entries": [],
+  "note": "接入获准使用的固定版本学习词典后填写。entries: lemma, pos, sense_id, rank, definition, source。rank_scope 必须明确为 lemma 或 pos；缺少配置时熟词僻义证据为 unknown。"
+}

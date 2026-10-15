@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "properties": {
+    "rule_application": {
+      "type": "object",
+      "properties": {
+        "anchor_score": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 5
+        },
+        "anchor_quote": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criterion_evidence": {
+          "type": "string"
+        },
+        "adjacent_band_check": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "anchor_score",
+        "anchor_quote",
+        "criterion_evidence",
+        "adjacent_band_check"
+      ],
+      "additionalProperties": false
+    },
+    "judgment_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "block_id": {
+                  "type": "string"
+                },
+                "start": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "end": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "block_id",
+                "start",
+                "end",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "counted": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "refs",
+          "counted",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "judgment_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "rule_application",
+    "judgment_items",
+    "judgment_count"
+  ]
+}

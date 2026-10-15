@@ -1,0 +1,235 @@
+{
+  "version": "provided-contextual-examples-2026-10-14.v2",
+  "source": "熟词僻义.pdf",
+  "role": "examples_only_not_dictionary",
+  "pages": 5,
+  "lemmas": [
+    "address",
+    "share",
+    "observe",
+    "cover",
+    "spare",
+    "attend",
+    "chance",
+    "coat",
+    "change",
+    "drive",
+    "fine",
+    "ground",
+    "head",
+    "jam",
+    "present",
+    "press",
+    "reason",
+    "ring",
+    "rule",
+    "run",
+    "sentence",
+    "sound",
+    "stand",
+    "state",
+    "strike",
+    "turn",
+    "wear",
+    "will"
+  ],
+  "note": "人工读取原PDF五页的熟义/僻义对照，供模型理解判断方式；不是封闭判定词表，不提供义项排名。表外词依据实际语境同样判断。",
+  "entries": [
+    {
+      "lemma": "address",
+      "common_sense": "地址",
+      "rare_senses": "处理；解决；向……发表演讲",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "share",
+      "common_sense": "分享",
+      "rare_senses": "份额；股份",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "observe",
+      "common_sense": "观察",
+      "rare_senses": "遵守；庆祝",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "cover",
+      "common_sense": "覆盖",
+      "rare_senses": "行走；支付；报道",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "spare",
+      "common_sense": "空闲的",
+      "rare_senses": "抽出；饶恕",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "attend",
+      "common_sense": "出席",
+      "rare_senses": "照料；专心",
+      "pdf_page": 1,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "chance",
+      "common_sense": "机会",
+      "rare_senses": "偶然；运气；可能性",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "coat",
+      "common_sense": "外套",
+      "rare_senses": "覆盖；涂上",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "change",
+      "common_sense": "改变",
+      "rare_senses": "零钱",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "drive",
+      "common_sense": "驾驶",
+      "rare_senses": "驱使；猛击",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "fine",
+      "common_sense": "好的",
+      "rare_senses": "罚款；罚金",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "ground",
+      "common_sense": "地面",
+      "rare_senses": "理由",
+      "pdf_page": 2,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "head",
+      "common_sense": "头",
+      "rare_senses": "前进；领导；首领",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "jam",
+      "common_sense": "果酱",
+      "rare_senses": "堵塞；困境；塞进",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "present",
+      "common_sense": "现在的；礼物",
+      "rare_senses": "呈现；出席的",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "press",
+      "common_sense": "按；压",
+      "rare_senses": "新闻界；出版社",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "reason",
+      "common_sense": "原因",
+      "rare_senses": "推理；劝说",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "ring",
+      "common_sense": "戒指；铃声",
+      "rare_senses": "环绕；打电话",
+      "pdf_page": 3,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "rule",
+      "common_sense": "规则",
+      "rare_senses": "统治",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "run",
+      "common_sense": "跑",
+      "rare_senses": "经营；运行；竞选",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "sentence",
+      "common_sense": "句子",
+      "rare_senses": "判决；刑期",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "sound",
+      "common_sense": "声音",
+      "rare_senses": "健康的；合理的",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "stand",
+      "common_sense": "站立",
+      "rare_senses": "忍受；立场",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "state",
+      "common_sense": "状态",
+      "rare_senses": "国家；州；陈述",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "strike",
+      "common_sense": "打击；撞击",
+      "rare_senses": "罢工；突然想到",
+      "pdf_page": 4,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "turn",
+      "common_sense": "转动",
+      "rare_senses": "变成；轮流；轮次",
+      "pdf_page": 5,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "wear",
+      "common_sense": "穿；戴",
+      "rare_senses": "磨损；衣物",
+      "pdf_page": 5,
+      "source": "熟词僻义.pdf"
+    },
+    {
+      "lemma": "will",
+      "common_sense": "将",
+      "rare_senses": "意志；遗嘱",
+      "pdf_page": 5,
+      "source": "熟词僻义.pdf"
+    }
+  ]
+}

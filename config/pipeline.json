@@ -1,0 +1,215 @@
+{
+  "version": "english-difficulty-2026-10-15.v4.8-projected-schema",
+  "provider": {
+    "model": "doubao-seed-2-0-mini-260215",
+    "response_format": "json_schema",
+    "strict_schema": true,
+    "allowed_models": [
+      "doubao-seed-2-0-mini-260215"
+    ],
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "api_key_env": "ARK_API_KEY",
+    "timeout_seconds": 120,
+    "max_tokens": 12000,
+    "temperature": 0,
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "limits": {
+    "attempts_per_node": 2,
+    "max_calls_per_run": 100,
+    "max_input_characters": 100000,
+    "max_units_per_document": 100
+  },
+  "prompts": {
+    "common": "common.md",
+    "structure": "structure.md",
+    "route": "route.md",
+    "lexical": "lexical.md",
+    "dimension": "dimension.md",
+    "judgment": "judgment.md",
+    "judgment_syntax": "judgment_syntax.md",
+    "judgment_distractors": "judgment_distractors.md",
+    "judgment_steps": "judgment_steps.md",
+    "judgment_context": "judgment_context.md",
+    "judgment_cognition": "judgment_cognition.md",
+    "judgment_rules": "judgment_rules.md",
+    "judgment_reading_cognition": "judgment_reading_cognition.md",
+    "judgment_reading_paraphrase": "judgment_reading_paraphrase.md",
+    "judgment_reading_location": "judgment_reading_location.md",
+    "judgment_grammar_context": "judgment_grammar_context.md",
+    "dimension_core": "dimension_core.md",
+    "repair_contract": "repair_contract.md"
+  },
+  "schemas": {
+    "input": "input.json",
+    "structure": "structure.json",
+    "route": "route.json",
+    "lexical": "lexical.json",
+    "evidence": "evidence.json",
+    "score": "score.json",
+    "dimension": "dimension.json",
+    "judgment_metrics": "judgment_metrics.json"
+  },
+  "scoring": {
+    "star_lower_bounds": [
+      1,
+      1.81,
+      2.61,
+      3.41,
+      4.21
+    ],
+    "three_band": {
+      "easy_below": 2.33,
+      "hard_above": 3.66
+    },
+    "missing": "renormalize_available",
+    "cloze_span": {
+      "same_sentence_one_min": 95,
+      "same_sentence_two_min": 85,
+      "same_sentence_two_max": 94,
+      "local_three_min": 65,
+      "local_three_max": 84,
+      "local_four_min": 55,
+      "local_four_max": 64,
+      "local_five_below": 54
+    },
+    "seven_length_upper_bounds": [
+      180,
+      200,
+      249,
+      299
+    ]
+  },
+  "resources": {
+    "vocabulary": "vocabulary.json",
+    "general_rules": "general_rules.json",
+    "rare_examples": "rare_examples.json",
+    "dictionary": "dictionary.json"
+  },
+  "lexical": {
+    "high_above": 26,
+    "low_below": 10,
+    "rare_min_rank": 3,
+    "rare_sense_method": "contextual_model_with_examples"
+  },
+  "resource_requirements": {
+    "cloze_single": {
+      "d1": [
+        "lexical_complete",
+        "contextual_senses"
+      ]
+    },
+    "cloze_whole": {
+      "d4": [
+        "lexical_complete",
+        "contextual_senses"
+      ]
+    },
+    "grammar_fill_whole": {
+      "d5": [
+        "lexical_complete"
+      ]
+    },
+    "reading_whole": {
+      "d4": [
+        "lexical_complete"
+      ]
+    }
+  },
+  "policy": {
+    "manual_wait": false,
+    "listening_enabled": false,
+    "parent_score": "independent_rubric",
+    "unknown_rule_boundary": "unavailable",
+    "scope_mismatch": "unsupported",
+    "source_instructions": "untrusted_data"
+  },
+  "lexical_skip_routes": [
+    "reading_single",
+    "grammar_choice"
+  ],
+  "assessment_perspective": {
+    "population": "K12学生；高考题以完成相应高中课程、具备课标基础的普通高中学生为参照",
+    "constraints": "学生只看到题面，尚未得知答案和解析；不采用命题教师、语言学专家或熟练解题者视角；不假设所有学生基础相同",
+    "purpose": "记录当前分值依据供后续校准；不为贴合人工样本直接改分"
+  },
+  "dimension_execution": "independent_complete_judgment",
+  "dimension_guidance": {
+    "reading_single": {
+      "d1": "judgment_reading_cognition",
+      "d2": "judgment_reading_location",
+      "d3": "judgment_reading_paraphrase",
+      "d4": "judgment_syntax"
+    },
+    "grammar_choice": {
+      "d1": "judgment_rules",
+      "d2": "judgment_syntax",
+      "d3": "judgment_grammar_context",
+      "d4": "judgment_distractors",
+      "d5": "judgment_steps"
+    }
+  },
+  "counted_dimensions": {
+    "reading_single": [
+      "d4"
+    ],
+    "grammar_choice": [
+      "d1",
+      "d2",
+      "d5"
+    ]
+  },
+  "syntax_count_checks": {
+    "reading_single": {
+      "dimension": "d4",
+      "bands": [
+        {
+          "min": 1,
+          "max": 1,
+          "score": 2
+        },
+        {
+          "min": 2,
+          "max": 2,
+          "score": 3
+        },
+        {
+          "min": 3,
+          "max": 3,
+          "score": 4
+        },
+        {
+          "min": 4,
+          "max": null,
+          "score": 5
+        }
+      ]
+    },
+    "grammar_choice": {
+      "dimension": "d2",
+      "bands": [
+        {
+          "min": 1,
+          "max": 1,
+          "score": 3
+        },
+        {
+          "min": 2,
+          "max": 2,
+          "score": 4
+        },
+        {
+          "min": 3,
+          "max": null,
+          "score": 5
+        }
+      ]
+    }
+  },
+  "dimension_prompt_overrides": {
+    "reading_single": "dimension_core",
+    "grammar_choice": "dimension_core"
+  }
+}

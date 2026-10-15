@@ -1,0 +1,30 @@
+# Local inputs, model output, and human comparison data
+runs/
+outputs/
+*.xlsx
+*.xls
+*.pdf
+*.docx
+
+# Secrets and local Python state
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Internal evaluation records and scripts tied to private test sets
+CHANGELOG.md
+VERIFICATION.md
+tools/build_schemas.py
+tools/capture_test_workbook.py
+tools/recover_test1.py
+tools/report_*.py
+tools/verify_rerun.py

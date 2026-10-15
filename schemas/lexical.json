@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "occurrences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "lemma": {
+            "type": "string"
+          },
+          "pos": {
+            "type": "string"
+          },
+          "contextual_sense": {
+            "type": "string"
+          },
+          "exemption": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "lemma",
+          "pos",
+          "contextual_sense",
+          "exemption"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "coverage_note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "occurrences",
+    "complete",
+    "coverage_note"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "english.lexical.2026-10-14.v1"
+}
